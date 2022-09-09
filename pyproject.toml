@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "usvctl"
+version = "0.1.2"
+description = ""
+authors = ["Philipp Jaschke <philipp.jaschke@schulz.st>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+usvctl = 'usvctl.main:app'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = {extras = ["all"], version = "^0.6.1"}
+trio = "^0.21.0"
+trio-websocket = "^0.9.2"
+Jinja2 = "^3.1.2"
+httpx = "^0.23.0"
+pydantic = "^1.10.1"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+flake8 = "^5.0.4"
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

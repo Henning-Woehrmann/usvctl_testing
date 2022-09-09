@@ -1,0 +1,16 @@
+{
+    "kind": "Rule",
+    "metadata": {
+        "name": "{{ name }}",
+        "labels": {}
+    },
+    "spec": {
+        "enabled": "{{ enabled }}",
+        "selectors": {
+            "matchLabels": {{ match_labels }}
+        },
+        "condition": {
+            "soc": "{{ soc }}"
+        }
+    }
+}

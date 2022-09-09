@@ -1,0 +1,14 @@
+{
+    "kind": "Task",
+    "metadata": {
+        "name": "{{ name }}",
+        "labels": {{ labels }}
+    },
+    "spec": {
+        "enabled": "{{ enabled }}",
+        "endpoint": "{{ endpoint }}",
+        "action": "{{ action }}",
+        "test": "{{ test }}",
+        "healthcheck": "{{ healthcheck }}"
+    }
+}

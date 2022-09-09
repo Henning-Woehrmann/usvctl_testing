@@ -1,0 +1,10 @@
+[flake8]
+ignore =
+        E226,
+        E302,
+        E41,
+        F722, # pydantic with annotations (pyflakes) to PEP 484
+max-line-length = 120
+exclude = .venv/*, tests/*, test/*
+max-complexity = 10
+extend-ignore = E203
