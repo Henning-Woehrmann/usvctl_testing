@@ -1,0 +1,26 @@
+name: Run tests on pull request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions: read-all
+
+jobs:
+  check_version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Version
+        uses: henningwoehr/actions/poetry/check-version@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  lint_flake8:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lint code
+        uses: henningwoehr/actions/poetry/lint-flake8@main
+        with:
+          python-version: "3.9"
