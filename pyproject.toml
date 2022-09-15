@@ -9,7 +9,7 @@ readme = "README.md"
 usvctl = 'usvctl.main:app'
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
 typer = {extras = ["all"], version = "^0.6.1"}
 trio = "^0.21.0"
 trio-websocket = "^0.9.2"
