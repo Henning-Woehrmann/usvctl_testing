@@ -44,7 +44,7 @@ jobs:
         artifact-name: ${{ env.ARTIFACT_NAME }}
         display-name: ${{ env.DISPLAY_NAME }}
         app-author: ${{ env.APP_AUTHOR }}
-        python-version: "3.9"
+        python-version: "3.10"
 
   build_windows_x32:
     runs-on: windows-2022
@@ -62,7 +62,7 @@ jobs:
         artifact-name: ${{ env.ARTIFACT_NAME }}
         display-name: ${{ env.DISPLAY_NAME }}
         app-author: ${{ env.APP_AUTHOR }}
-        python-version: "3.9"
+        python-version: "3.10"
 
   build_windows_x64:
     runs-on: windows-2022
@@ -80,7 +80,7 @@ jobs:
         artifact-name: ${{ env.ARTIFACT_NAME }}
         display-name: ${{ env.DISPLAY_NAME }}
         app-author: ${{ env.APP_AUTHOR }}
-        python-version: "3.9"
+        python-version: "3.10"
 
   create_release:
     runs-on: ubuntu-latest
