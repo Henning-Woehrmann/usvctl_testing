@@ -21,8 +21,8 @@ api_address: str = None
 @app.command()
 def task(
         name: str = typer.Argument(..., help="The name of the task"),
-        endpoint: str = typer.Argument(..., help="The endpoint of idk..."),
-        action: str = typer.Argument(..., help="Name of the script to execute when task get's called"),
+        endpoint: str = typer.Option(..., help="The endpoint of idk..."),
+        action: str = typer.Option(..., help="Name of the script to execute when task get's called"),
         test: str = typer.Option("", help="Name of the test script"),
         healthcheck: str = typer.Option("", help="Name of the script for the healthcheck"),
         label: List[str] = typer.Option(None, help="Enter labels \"--label foo=bar --label abc=def)\""),
@@ -50,9 +50,9 @@ def task(
 @app.command()
 def rule(
         name: str = typer.Argument(..., help="The name of the task"),
-        soc: int = typer.Argument(..., help=""),
         match_label: List[str] = typer.Option(None, help="Enter labels \"foo=bar\""),
-        enabled: bool = typer.Option(False, help="Enable the task on creation")):
+        enabled: bool = typer.Option(False, help="Enable the task on creation"),
+        soc: int = typer.Option(0, help="")):
     """
     Create a new rule.
     """
