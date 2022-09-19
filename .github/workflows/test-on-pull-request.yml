@@ -24,3 +24,57 @@ jobs:
         uses: henningwoehr/actions/poetry/lint-flake8@main
         with:
           python-version: "3.10"
+
+  test_build_linux:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: build executable
+      uses: henningwoehr/actions/pyoxidizer-build@main
+      with:
+        target-system: linux_gnu_x64
+        app-name: test_build
+        run-command: test_build
+        artifact-name: test_build
+        display-name: test_build
+        app-author: test_build
+        python-version: "3.10"
+
+  test_build_windows_x32:
+    runs-on: windows-2022
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: build executable
+      uses: henningwoehr/actions/pyoxidizer-build@main
+      with:
+        target-system: windows_x32
+        app-name: test_build
+        run-command: test_build
+        artifact-name: test_build
+        display-name: test_build
+        app-author: test_build
+        python-version: "3.10"
+
+  test_build_windows_x64:
+    runs-on: windows-2022
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: build executable
+      uses: henningwoehr/actions/pyoxidizer-build@main
+      with:
+        target-system: windows_x64
+        app-name: test_build
+        run-command: test_build
+        artifact-name: test_build
+        display-name: test_build
+        app-author: test_build
+        python-version: "3.10"
